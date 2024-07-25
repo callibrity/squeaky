@@ -13,7 +13,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -57,7 +57,7 @@ class DefaultCreateStudentUseCaseTest {
 
         var request = new CreateStudentRequest("John", "Doe", "john@doe.com");
 
-        assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> useCase.createStudent(request));
+        assertThatThrownBy(() -> useCase.createStudent(request)).isInstanceOf(IllegalArgumentException.class);
     }
 
 

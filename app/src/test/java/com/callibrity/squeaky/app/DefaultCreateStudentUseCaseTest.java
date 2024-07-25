@@ -57,9 +57,7 @@ class DefaultCreateStudentUseCaseTest {
 
         var request = new CreateStudentRequest("John", "Doe", "john@doe.com");
 
-        assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> {
-            useCase.createStudent(request);
-        });
+        assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> useCase.createStudent(request));
     }
 
 

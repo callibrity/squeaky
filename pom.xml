@@ -24,10 +24,17 @@
         <failsafe.plugin.version>3.3.1</failsafe.plugin.version>
     </properties>
 
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
 
     <modules>
         <module>domain</module>
         <module>app</module>
+        <module>persistence</module>
     </modules>
 
     <build>
